@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 19:45:21 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/11/24 20:34:39 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/11/24 22:14:18 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ class	BitcoinExchange {
 		std::string		_fname;
 		std::ifstream	_fvalues;
 };
+
+void	input_parsing(std::ifstream file);
 
 #endif
