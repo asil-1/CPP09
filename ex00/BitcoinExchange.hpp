@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 22:45:32 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/11/27 02:00:05 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/11/27 03:19:53 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ enum	e_format {
 
 /* @return could throw an error */
 void	init_database(std::map<std::string, float>& database_m);
+void	exchange_rate(const std::map<std::string, float>& database_m, const std::string file);
 
 #endif
