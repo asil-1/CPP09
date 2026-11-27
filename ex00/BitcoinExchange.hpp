@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 19:45:21 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/11/24 22:14:18 by ldepenne         ###   ########.fr       */
+/*   Created: 2026/11/26 22:45:32 by ldepenne          #+#    #+#             */
+/*   Updated: 2026/11/27 02:00:05 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,33 @@
 
 # include <iostream>
 # include <fstream>
+# include <cstdlib>
+# include <map>
 
-class	BitcoinExchange {
-	public:
-		BitcoinExchange();
-		BitcoinExchange(std::string file);
-		BitcoinExchange(const BitcoinExchange& other);
-		BitcoinExchange &operator=(const BitcoinExchange& other);
-		~BitcoinExchange();
+# define FILE_DATABASE std::string("data.csv")
 
-	private:
-		std::string		_fname;
-		std::ifstream	_fvalues;
+enum	e_month {
+	JANUARY = 1,
+	FEBRUARY,
+	MARCH,
+	APRIL,
+	MAY,
+	JUNE,
+	JULY,
+	AUGUST,
+	SEPTEMBER,
+	OCTOBER,
+	NOVEMBER,
+	DECEMBER
 };
 
-void	input_parsing(std::ifstream file);
+enum	e_format {
+	DATE_SIZE = 10,
+	DASH_1 = 4,
+	DASH_2 = 7
+};
+
+/* @return could throw an error */
+void	init_database(std::map<std::string, float>& database_m);
 
 #endif
