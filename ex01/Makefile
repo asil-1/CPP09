@@ -1,7 +1,7 @@
 #Makefile____________________
 NAME		:=	RPN
 CXX			:=	c++
-CXXFLAGS	:=	-Wall -Werror -Wextra -std=c++98 -MMD -MP
+CXXFLAGS	:=	-Wall -Werror -Wextra -std=c++98 -MMD -MP -g
 
 BUILD_DIR	:=	obj/
 SRC			:=	main.cpp \

@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/27 04:43:03 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/11/27 05:53:12 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/11/27 17:42:45 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <cstdlib>
+# include <limits>
 # include <stack>
 
 enum	e_operator {

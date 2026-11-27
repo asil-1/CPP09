@@ -6,7 +6,7 @@
 /*   By: ldepenne <ldepenne@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/27 04:43:52 by ldepenne          #+#    #+#             */
-/*   Updated: 2026/11/27 06:37:20 by ldepenne         ###   ########.fr       */
+/*   Updated: 2026/11/27 18:06:35 by ldepenne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,14 @@ static int	calc(int a, int b, e_operator op)
 	{
 		case PLUS:	return (a + b);
 		case MINUS:	return (a - b);
-		case MULT:	return (a * b);
+		case MULT:
+		{
+			int	r = a * b;
+			if ((a > 0 && b > 0 && r < 0) || (a < 0 && b > 0 && r > 0)
+				|| (a > 0 && b < 0 && r > 0))
+				throw std::runtime_error("Error: multiplication overflow");
+			return (a * b);
+		}
 		case DIV:
 		{
 			if (b == 0)
